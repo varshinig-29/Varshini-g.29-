@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 12 - Array</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(circle at top left, #172554, transparent 35%),
+                radial-gradient(circle at bottom right, #3b0764, transparent 35%),
+                #020617;
+            color: white;
+        }
+
+        .container {
+            max-width: 750px;
+            width: 90%;
+            padding: 40px;
+            text-align: center;
+            background: rgba(15,23,42,0.92);
+            border: 1px solid rgba(34,211,238,0.25);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        h1 { color: #f7df1e; margin-bottom: 15px; }
+        h2 { color: #22d3ee; margin-bottom: 20px; }
+
+        .result {
+            padding: 20px;
+            background: rgba(30,41,59,0.8);
+            border-radius: 12px;
+            line-height: 2;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JavaScript Laboratory</h1>
+    <h2>Experiment 12 - Largest & Smallest</h2>
+
+    <div class="result">
+
+        <script>
+            let numbers = [25, 10, 45, 5, 30];
+
+            let largest = numbers[0];
+            let smallest = numbers[0];
+
+            for (let i = 1; i < numbers.length; i++) {
+
+                if (numbers[i] > largest) {
+                    largest = numbers[i];
+                }
+
+                if (numbers[i] < smallest) {
+                    smallest = numbers[i];
+                }
+            }
+
+            document.write("Array = " + numbers.join(", ") + "<br>");
+            document.write("Largest = " + largest + "<br>");
+            document.write("Smallest = " + smallest);
+        </script>
+
+    </div>
+
+</div>
+
+</body>
+</html>

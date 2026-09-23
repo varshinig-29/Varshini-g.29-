@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Button Click Event</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            background:
+                radial-gradient(circle at top left, #172554, transparent 35%),
+                radial-gradient(circle at bottom right, #3b0764, transparent 35%),
+                #020617;
+
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            background: rgba(15, 23, 42, 0.92);
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #f7df1e;
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin: 25px;
+        }
+
+        button {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            background: #22d3ee;
+            color: #020617;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 22px;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 12px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Laboratory</h1>
+
+        <h2>24. Button Click Event</h2>
+
+        <button onclick="buttonClicked()">Click Me</button>
+
+        <div class="result" id="result">
+            Waiting for button click...
+        </div>
+
+    </div>
+
+    <script>
+        function buttonClicked() {
+            document.getElementById("result").innerHTML =
+                "Button Clicked Successfully!";
+        }
+    </script>
+
+</body>
+</html>

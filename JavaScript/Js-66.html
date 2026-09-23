@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at top left, #172554, transparent 35%),
+                radial-gradient(circle at bottom right, #3b0764, transparent 35%),
+                #020617;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            background: rgba(15,23,42,.92);
+            border: 1px solid rgba(34,211,238,.25);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,.4);
+        }
+
+        h1 { color: #f7df1e; margin-bottom: 12px; }
+        h2 { color: #22d3ee; margin-bottom: 25px; }
+
+        .result {
+            padding: 22px;
+            margin-top: 20px;
+            background: rgba(30,41,59,.8);
+            border: 1px solid rgba(139,92,246,.4);
+            border-radius: 12px;
+            font-size: 18px;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 8px;
+            border-radius: 8px;
+            border: 1px solid #22d3ee;
+            background: #0f172a;
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #22d3ee;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover { background: #f7df1e; }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JavaScript Program 66</h1>
+    <h2>Regular Expressions</h2>
+
+    <input type="text" id="text" placeholder="Enter text">
+
+    <br>
+
+    <button onclick="checkPattern()">Check Pattern</button>
+
+    <div class="result" id="output"></div>
+
+</div>
+
+<script>
+function checkPattern() {
+
+    let text = document.getElementById("text").value;
+
+    let pattern = /^[A-Za-z]+$/;
+
+    if (pattern.test(text)) {
+
+        document.getElementById("output").innerHTML =
+            "Valid: Only alphabets are present.";
+
+    } else {
+
+        document.getElementById("output").innerHTML =
+            "Invalid: Numbers or special characters found.";
+    }
+}
+</script>
+
+</body>
+</html>

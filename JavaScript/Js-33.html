@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Application</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            background:
+                radial-gradient(circle at top left, #172554, transparent 35%),
+                radial-gradient(circle at bottom right, #3b0764, transparent 35%),
+                #020617;
+
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            background: rgba(15, 23, 42, 0.92);
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #f7df1e;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            background: #22d3ee;
+            color: #020617;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #f7df1e;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 22px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 12px;
+            color: #e2e8f0;
+            font-size: 18px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Laboratory</h1>
+
+        <h2>33. Quiz Application</h2>
+
+        <div class="result" id="question">
+            What is the capital of India?
+            <br><br>
+
+            <button onclick="checkAnswer('Delhi')">Delhi</button>
+            <button onclick="checkAnswer('Mumbai')">Mumbai</button>
+            <button onclick="checkAnswer('Chennai')">Chennai</button>
+        </div>
+
+        <div class="result" id="result">
+            Select an answer
+        </div>
+
+    </div>
+
+    <script>
+
+        function checkAnswer(answer) {
+
+            if (answer == "Delhi") {
+
+                document.getElementById("result").innerHTML =
+                    "Correct Answer!";
+
+            }
+            else {
+
+                document.getElementById("result").innerHTML =
+                    "Wrong Answer!";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>

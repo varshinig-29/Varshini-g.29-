@@ -1,0 +1,235 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Development Practicals</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            color: white;
+            background: linear-gradient(135deg, #020617, #4c1d95);
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        nav {
+            padding: 20px 50px;
+            background: #0f172a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            margin: 0;
+            color: #a78bfa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #c4b5fd;
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: 90px auto 50px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #a78bfa;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .cards {
+            max-width: 1000px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .card {
+            padding: 40px 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.13);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #7c3aed;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        .button:hover {
+            background: #8b5cf6;
+        }
+
+        footer {
+            margin-top: 70px;
+            padding: 25px;
+            background: #0f172a;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>WebPracticals</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="html/index.html">HTML</a>
+            <a href="css/index.html">CSS</a>
+            <a href="javascript/index.html">JavaScript</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <h1>
+            Web Development <span>Practicals</span>
+        </h1>
+
+        <p>
+            A complete collection of HTML, CSS and JavaScript
+            practical programs with clean demonstrations
+            and working examples.
+        </p>
+
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+
+            <div class="icon">🌐</div>
+
+            <h2>HTML Programs</h2>
+
+            <p>
+                Learn HTML fundamentals, forms, tables,
+                multimedia, semantic elements and more.
+            </p>
+
+            <a class="button" href="html/index.html">
+                View HTML
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🎨</div>
+
+            <h2>CSS Programs</h2>
+
+            <p>
+                Explore selectors, layouts, Flexbox, Grid,
+                animations, responsive design and more.
+            </p>
+
+            <a class="button" href="css/index.html">
+                View CSS
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">⚡</div>
+
+            <h2>JavaScript Programs</h2>
+
+            <p>
+                Practice JavaScript basics, DOM manipulation,
+                events, forms, storage and mini projects.
+            </p>
+
+            <a class="button" href="javascript/index.html">
+                View JavaScript
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Web Development Practical Programs
+    </footer>
+
+</body>
+
+</html>
+```

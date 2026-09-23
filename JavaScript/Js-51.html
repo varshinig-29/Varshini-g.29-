@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at top left, #172554, transparent 35%),
+                radial-gradient(circle at bottom right, #3b0764, transparent 35%),
+                #020617;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            background: rgba(15, 23, 42, 0.92);
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 { color: #f7df1e; margin-bottom: 12px; }
+        h2 { color: #22d3ee; margin-bottom: 25px; }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 8px;
+            border-radius: 8px;
+            border: 1px solid #22d3ee;
+            background: #0f172a;
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #22d3ee;
+            color: #020617;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover { background: #f7df1e; }
+
+        .result {
+            margin-top: 20px;
+            padding: 22px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 12px;
+            color: #e2e8f0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JavaScript Laboratory</h1>
+    <h2>51. Armstrong Number</h2>
+
+    <input type="number" id="number" placeholder="Enter number">
+
+    <br>
+
+    <button onclick="checkArmstrong()">Check</button>
+
+    <div class="result" id="result"></div>
+
+</div>
+
+<script>
+
+function checkArmstrong() {
+
+    let number = Number(document.getElementById("number").value);
+    let original = number;
+    let digits = String(number).length;
+    let sum = 0;
+
+    while (number > 0) {
+
+        let digit = number % 10;
+
+        sum += Math.pow(digit, digits);
+
+        number = Math.floor(number / 10);
+    }
+
+    if (sum == original) {
+
+        document.getElementById("result").innerHTML =
+            original + " is an Armstrong number.";
+
+    }
+    else {
+
+        document.getElementById("result").innerHTML =
+            original + " is not an Armstrong number.";
+
+    }
+}
+
+</script>
+
+</body>
+</html>

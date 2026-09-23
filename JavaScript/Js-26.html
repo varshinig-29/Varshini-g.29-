@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Change Image on Button Click</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            background:
+                radial-gradient(circle at top left, #172554, transparent 35%),
+                radial-gradient(circle at bottom right, #3b0764, transparent 35%),
+                #020617;
+
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+
+            background: rgba(15, 23, 42, 0.92);
+
+            border: 1px solid rgba(34, 211, 238, 0.25);
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            text-align: center;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #f7df1e;
+            margin-bottom: 12px;
+            font-size: 32px;
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin-bottom: 25px;
+        }
+
+        .result {
+            padding: 22px;
+
+            background: rgba(30, 41, 59, 0.8);
+
+            border: 1px solid rgba(139, 92, 246, 0.4);
+
+            border-radius: 12px;
+
+            color: #e2e8f0;
+
+            font-size: 18px;
+
+            line-height: 2;
+        }
+
+        img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #22d3ee;
+            color: #020617;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #f7df1e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Laboratory</h1>
+
+        <h2>26. Change Image on Button Click</h2>
+
+        <div class="result">
+
+            <img id="myImage"
+                 src="https://picsum.photos/id/237/250/180"
+                 alt="Image">
+
+            <br>
+
+            <button onclick="changeImage()">
+                Change Image
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function changeImage() {
+
+            document.getElementById("myImage").src =
+                "https://picsum.photos/id/1025/250/180";
+
+        }
+
+    </script>
+
+</body>
+</html>
