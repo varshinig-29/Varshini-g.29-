@@ -1,0 +1,120 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Homepage</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+header {
+    background: #101d31;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #22d3ee;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: #17243a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card {
+    background: #101d31;
+    padding: 25px;
+    width: 250px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    color: #22d3ee;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ABC College of Engineering</h1>
+    <p>Knowledge • Innovation • Excellence</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>Welcome to Our College</h2>
+    <p>Building a brighter future through quality education.</p>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>Departments</h3>
+        <p>Explore various academic departments.</p>
+    </div>
+
+    <div class="card">
+        <h3>Admissions</h3>
+        <p>Learn about admission opportunities.</p>
+    </div>
+
+    <div class="card">
+        <h3>Campus Life</h3>
+        <p>Discover activities and student life.</p>
+    </div>
+</section>
+
+</body>
+</html>
+```

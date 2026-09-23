@@ -1,0 +1,95 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: #101d31;
+            padding: 30px;
+        }
+
+        .main {
+            padding: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px;
+            background: #172554;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 700px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <p>Home</p>
+            <p>Students</p>
+            <p>Courses</p>
+            <p>Reports</p>
+        </aside>
+
+        <main class="main">
+            <h1>Dashboard Overview</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2>120</h2>
+                    <p>Students</p>
+                </div>
+
+                <div class="card">
+                    <h2>15</h2>
+                    <p>Courses</p>
+                </div>
+
+                <div class="card">
+                    <h2>8</h2>
+                    <p>Projects</p>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
+```

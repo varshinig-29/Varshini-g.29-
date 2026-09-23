@@ -1,0 +1,56 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clamp Min Max</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: min(90%, 900px);
+            margin: auto;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: #22d3ee;
+        }
+
+        .box {
+            width: 80%;
+            height: max(200px, 30vh);
+            background: #101d31;
+            padding: 30px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Functions</h1>
+
+        <div class="box">
+            <h2>clamp() min() max()</h2>
+            <p>
+                This page demonstrates clamp(), min(), and max()
+                CSS functions.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

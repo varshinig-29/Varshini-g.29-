@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+
+    <style>
+        body {
+            background: #07111f;
+            color: white;
+            font-family: Arial;
+            padding: 40px;
+        }
+
+        /* Element selector */
+        h1 {
+            color: cyan;
+        }
+
+        /* Class selector */
+        .highlight {
+            color: #a78bfa;
+        }
+
+        /* ID selector */
+        #special {
+            color: #f472b6;
+        }
+
+        /* Grouping selector */
+        h2, p {
+            font-size: 20px;
+        }
+
+        /* Attribute selector */
+        input[type="text"] {
+            border: 2px solid #22d3ee;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Element Selector</h1>
+
+    <h2 class="highlight">Class Selector</h2>
+
+    <p id="special">ID Selector</p>
+
+    <input type="text" placeholder="Attribute Selector">
+
+</body>
+</html>

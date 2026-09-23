@@ -1,0 +1,16 @@
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.box {
+    background-color: white;
+    color: purple;
+    width: 300px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 2px solid purple;
+    border-radius: 10px;
+    font-size: 20px;
+}

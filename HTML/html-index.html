@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Experiments</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top left, #172554, transparent 35%),
+                radial-gradient(circle at bottom right, #3b0764, transparent 35%),
+                #020617;
+            color: white;
+            padding: 50px 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            color: #22d3ee;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .experiments {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            border-radius: 18px;
+            padding: 28px;
+            min-height: 190px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            transition: 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #22d3ee;
+            box-shadow: 0 15px 40px rgba(34, 211, 238, 0.15);
+        }
+
+        .number {
+            font-size: 15px;
+            color: #8b5cf6;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .open-btn {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+
+            background: linear-gradient(
+                135deg,
+                #06b6d4,
+                #8b5cf6
+            );
+
+            color: white;
+            padding: 11px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .open-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        @media (max-width: 900px) {
+            .experiments {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 30px 15px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .experiments {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>HTML Experiments</h1>
+        <p>Web Laboratory — HTML Practical Experiments</p>
+    </div>
+
+    <div class="experiments">
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 01</div>
+                <h2>Basic HTML Webpage</h2>
+                <p>Headings, paragraphs and line breaks.</p>
+            </div>
+            <a href="html-01.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 02</div>
+                <h2>HTML Lists</h2>
+                <p>Ordered, unordered and description lists.</p>
+            </div>
+            <a href="html-02.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 03</div>
+                <h2>HTML Tables</h2>
+                <p>Rows, columns, borders and merged cells.</p>
+            </div>
+            <a href="html-03.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 04</div>
+                <h2>Images & Hyperlinks</h2>
+                <p>Adding images and hyperlinks to webpages.</p>
+            </div>
+            <a href="html-04.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 05</div>
+                <h2>Student Registration Form</h2>
+                <p>Create a student registration form.</p>
+            </div>
+            <a href="html-05.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 06</div>
+                <h2>Audio & Video</h2>
+                <p>Embedding audio and video in HTML.</p>
+            </div>
+            <a href="html-06.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 07</div>
+                <h2>Frames & Iframes</h2>
+                <p>Using iframe elements in webpages.</p>
+            </div>
+            <a href="html-07.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 08</div>
+                <h2>Semantic Elements</h2>
+                <p>Header, nav, section, article and footer.</p>
+            </div>
+            <a href="html-08.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 09</div>
+                <h2>HTML5 Input Types</h2>
+                <p>Email, date, number and password inputs.</p>
+            </div>
+            <a href="html-09.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 10</div>
+                <h2>College Timetable</h2>
+                <p>Create a college timetable using HTML.</p>
+            </div>
+            <a href="html-10.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 11</div>
+                <h2>Internal & External CSS</h2>
+                <p>Apply different types of CSS.</p>
+            </div>
+            <a href="html-11.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 12</div>
+                <h2>CSS Selectors & Styling</h2>
+                <p>Selectors, colors, fonts, margins, padding and borders.</p>
+            </div>
+            <a href="html-12.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 13</div>
+                <h2>Responsive Webpage</h2>
+                <p>Create a responsive webpage using media queries.</p>
+            </div>
+            <a href="html-13.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 14</div>
+                <h2>Bootstrap Components</h2>
+                <p>Use Bootstrap components in a webpage.</p>
+            </div>
+            <a href="html-14.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="number">EXPERIMENT 15</div>
+                <h2>Personal Portfolio</h2>
+                <p>Create a personal portfolio using HTML and CSS.</p>
+            </div>
+            <a href="html-15.html" target="_blank" class="open-btn">
+                Open Experiment
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

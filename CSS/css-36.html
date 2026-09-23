@@ -1,0 +1,73 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Cards</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            padding: 25px;
+            background: #101d31;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #22d3ee;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Services</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Web Design</h2>
+            <p>Create modern and attractive websites.</p>
+        </div>
+
+        <div class="card">
+            <h2>Development</h2>
+            <p>Build functional web applications.</p>
+        </div>
+
+        <div class="card">
+            <h2>UI Design</h2>
+            <p>Design clean and user-friendly interfaces.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

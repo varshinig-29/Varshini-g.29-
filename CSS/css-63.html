@@ -1,0 +1,64 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clamp Min Max</title>
+
+<style>
+body {
+    margin: 0;
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+}
+
+.container {
+    width: min(90%, 900px);
+    margin: auto;
+}
+
+h1 {
+    font-size: clamp(30px, 6vw, 60px);
+    color: #22d3ee;
+    text-align: center;
+}
+
+.card {
+    width: min(100%, 500px);
+    min-height: 200px;
+    max-width: 700px;
+    margin: 30px auto;
+    background: #101d31;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.card p {
+    font-size: clamp(16px, 2vw, 22px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CSS clamp(), min() and max()</h1>
+
+    <div class="card">
+        <h2>Responsive Card</h2>
+        <p>
+            This layout uses min(), max() and clamp()
+            for responsive sizing.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Pseudo Elements</title>
+
+    <style>
+        body {
+            background: #07111f;
+            color: white;
+            font-family: Arial;
+            padding: 50px;
+        }
+
+        h1::before {
+            content: "★ ";
+            color: #22d3ee;
+        }
+
+        h1::after {
+            content: " ★";
+            color: #f472b6;
+        }
+
+        p::first-letter {
+            color: #a78bfa;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        p::first-line {
+            color: #67e8f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pseudo Elements</h1>
+
+    <p>
+        CSS pseudo-elements allow us to style
+        specific parts of an HTML element.
+        They are useful for adding special effects.
+    </p>
+
+</body>
+</html>

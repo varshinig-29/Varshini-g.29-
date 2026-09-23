@@ -1,0 +1,249 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background: #101d31;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #22d3ee;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #22d3ee;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 70vh;
+            padding: 80px 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #22d3ee;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        /* Services */
+        .services {
+            padding: 60px 8%;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #101d31;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #22d3ee;
+            margin-bottom: 15px;
+        }
+
+        /* About */
+        .about {
+            padding: 60px 8%;
+
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+        }
+
+        .about h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #101d31;
+            padding: 25px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .hero {
+                padding: 50px 6%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>WebLab</h2>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Learn. Build. Create.</h1>
+                <p>
+                    A modern responsive website built using HTML5,
+                    CSS3, Flexbox, Grid and Media Queries.
+                </p>
+            </div>
+        </section>
+
+        <section class="services">
+
+            <h2>Our Services</h2>
+
+            <div class="grid">
+
+                <article class="card">
+                    <h3>HTML5</h3>
+                    <p>Build structured and semantic webpages.</p>
+                </article>
+
+                <article class="card">
+                    <h3>CSS3</h3>
+                    <p>Create modern and attractive designs.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Responsive</h3>
+                    <p>Make websites work on different screens.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="about">
+
+            <div class="about-content">
+                <h2>About Us</h2>
+
+                <p>
+                    We create clean and responsive websites
+                    using modern HTML and CSS techniques.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 WebLab. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```

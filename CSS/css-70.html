@@ -1,0 +1,90 @@
+```html id="m6v2cx"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Modal</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 60px;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .open-button {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #22d3ee;
+            color: #07111f;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #101d31;
+            padding: 40px;
+            width: 300px;
+            border-radius: 15px;
+        }
+
+        .close {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #22d3ee;
+            color: #07111f;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        #modal:target {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS-Only Modal</h1>
+
+    <a href="#modal" class="open-button">
+        Open Modal
+    </a>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Welcome!</h2>
+
+            <p>
+                This popup is created using only HTML and CSS.
+            </p>
+
+            <a href="#" class="close">
+                Close
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+```

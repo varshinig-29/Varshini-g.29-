@@ -1,0 +1,56 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance and Specificity</title>
+
+    <style>
+
+        /* Inheritance */
+        .parent {
+            color: cyan;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Element selector */
+        p {
+            color: white;
+        }
+
+        /* Class selector */
+        .text {
+            color: yellow;
+        }
+
+        /* ID selector has higher specificity */
+        #special {
+            color: pink;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="parent">
+
+        <h1>CSS Inheritance</h1>
+
+        <p>This text inherits the font family from the parent.</p>
+
+        <p class="text">
+            Class selector has higher specificity than the element selector.
+        </p>
+
+        <p id="special">
+            ID selector has higher specificity.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+```

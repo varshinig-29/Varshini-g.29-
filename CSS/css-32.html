@@ -1,0 +1,46 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #07111f;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 15px 35px;
+            border: 2px solid #22d3ee;
+            background: transparent;
+            color: #22d3ee;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: #22d3ee;
+            color: #07111f;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #22d3ee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Hover Me</button>
+
+</body>
+</html>
+```

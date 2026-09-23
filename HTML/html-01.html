@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Webpage</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #020617, #1e1b4b);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.2; }
+            to { opacity: 1; }
+        }
+
+        nav {
+            padding: 18px;
+            background: rgba(15, 23, 42, 0.9);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .card {
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="stars">
+    <span class="star" style="top:10%;left:20%"></span>
+    <span class="star" style="top:20%;left:70%"></span>
+    <span class="star" style="top:40%;left:40%"></span>
+    <span class="star" style="top:60%;left:80%"></span>
+    <span class="star" style="top:80%;left:15%"></span>
+</div>
+
+<nav>
+    <b>⭐ HTML Programs</b>
+
+    <div>
+        <a href="../index.html">Home</a>
+        <a href="index.html">HTML Programs</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Basic HTML Webpage</h1>
+
+        <h2>Welcome to My Website</h2>
+
+        <p>
+            This is a basic webpage created using HTML.
+        </p>
+
+        <p>
+            HTML is used to create the structure of webpages.
+        </p>
+
+        <hr>
+
+        <h3>My First Webpage</h3>
+
+        <p>
+            This page contains headings, paragraphs and horizontal lines.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

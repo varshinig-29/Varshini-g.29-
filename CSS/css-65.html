@@ -1,0 +1,283 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Responsive Website</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+/* Header */
+header {
+    background: #101d31;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #22d3ee;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    min-height: 70vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #07111f, #172554);
+}
+
+.hero h1 {
+    font-size: clamp(35px, 7vw, 70px);
+    color: #22d3ee;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cbd5e1;
+}
+
+/* Services */
+.services {
+    padding: 70px 8%;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    text-align: center;
+    color: #22d3ee;
+    margin-bottom: 35px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #101d31;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #22d3ee;
+    margin-bottom: 15px;
+}
+
+/* About */
+.about {
+    padding: 70px 8%;
+    background: #0b1729;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+/* Contact */
+.contact {
+    padding: 70px 8%;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+button {
+    padding: 14px;
+    background: #22d3ee;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #101d31;
+    padding: 25px;
+    text-align: center;
+    color: #cbd5e1;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">MyWebsite</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero" id="home">
+
+    <div>
+        <h1>Welcome to My Website</h1>
+        <p>
+            A complete responsive website using HTML5 and CSS3.
+        </p>
+    </div>
+
+</section>
+
+<section class="services" id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>Modern and responsive website designs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Development</h3>
+            <p>Clean and structured web development.</p>
+        </div>
+
+        <div class="card">
+            <h3>Responsive Design</h3>
+            <p>Websites that work on all screen sizes.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        This website demonstrates HTML5 semantic structure,
+        CSS3 styling, Flexbox, CSS Grid, transitions and
+        responsive media queries.
+    </p>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <form class="contact-form">
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 MyWebsite. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```

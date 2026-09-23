@@ -1,0 +1,78 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Calc</title>
+
+<style>
+body {
+    margin: 0;
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 80px;
+    background: #101d31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    min-height: calc(100vh - 150px);
+    padding: 30px;
+    text-align: center;
+}
+
+.card {
+    width: calc(100% - 60px);
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background: #101d31;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #22d3ee;
+}
+
+footer {
+    height: 70px;
+    background: #101d31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>CSS calc() Example</h2>
+</header>
+
+<main>
+
+    <div class="card">
+        <h1>Using calc()</h1>
+        <p>
+            CSS calc() performs calculations to create
+            flexible and responsive layouts.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    <p>Footer Section</p>
+</footer>
+
+</body>
+</html>
+```

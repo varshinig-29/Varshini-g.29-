@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Audio and Video</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#020617,#172554);
+    color: white;
+    text-align: center;
+}
+
+nav {
+    padding: 18px;
+    background: #0f172a;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+audio, video {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<b>⭐ Audio & Video</b>
+
+<a href="../index.html">Home</a>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Audio Player</h1>
+
+<audio controls>
+
+<source src="audio.mp3" type="audio/mpeg">
+
+Your browser does not support audio.
+
+</audio>
+
+</div>
+
+<div class="card">
+
+<h1>Video Player</h1>
+
+<video controls width="500">
+
+<source src="video.mp4" type="video/mp4">
+
+Your browser does not support video.
+
+</video>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

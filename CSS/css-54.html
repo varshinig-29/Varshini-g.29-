@@ -1,0 +1,87 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile First Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+/* Mobile First */
+header {
+    background: #101d31;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    color: #22d3ee;
+}
+
+.content {
+    padding: 20px;
+}
+
+.card {
+    background: #101d31;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.card h2 {
+    color: #22d3ee;
+}
+
+/* Larger Screens */
+@media (min-width: 700px) {
+    .content {
+        display: flex;
+        gap: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .card {
+        flex: 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mobile First Website</h1>
+    <p>Responsive design using CSS</p>
+</header>
+
+<section class="content">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>Structure of webpages.</p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>Styling and responsive design.</p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>Interactivity for webpages.</p>
+    </div>
+
+</section>
+
+</body>
+</html>
+```

@@ -1,0 +1,107 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Blog</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+header {
+    padding: 25px;
+    text-align: center;
+    background: #101d31;
+}
+
+header h1 {
+    color: #22d3ee;
+}
+
+.blog {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article {
+    background: #101d31;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.article h2 {
+    color: #22d3ee;
+}
+
+.article p {
+    color: #cbd5e1;
+}
+
+@media (max-width: 800px) {
+    .blog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .blog {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Daily News</h1>
+    <p>Latest stories and updates</p>
+</header>
+
+<section class="blog">
+
+    <article class="article">
+        <h2>Technology</h2>
+        <p>Latest developments in technology and innovation.</p>
+    </article>
+
+    <article class="article">
+        <h2>Education</h2>
+        <p>Updates and useful information about education.</p>
+    </article>
+
+    <article class="article">
+        <h2>Sports</h2>
+        <p>Read the latest sports news and events.</p>
+    </article>
+
+    <article class="article">
+        <h2>Science</h2>
+        <p>Discover interesting scientific developments.</p>
+    </article>
+
+    <article class="article">
+        <h2>Business</h2>
+        <p>Important business and economic updates.</p>
+    </article>
+
+    <article class="article">
+        <h2>Entertainment</h2>
+        <p>Latest entertainment stories and updates.</p>
+    </article>
+
+</section>
+
+</body>
+</html>
+```

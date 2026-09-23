@@ -1,0 +1,86 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Contact Form</title>
+
+<style>
+body {
+    margin: 0;
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto;
+    background: #101d31;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #22d3ee;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #22d3ee;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <div class="form-row">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+    </div>
+
+    <input type="text" placeholder="Subject">
+    <textarea placeholder="Your Message"></textarea>
+
+    <button>Send Message</button>
+</div>
+
+</body>
+</html>
+```

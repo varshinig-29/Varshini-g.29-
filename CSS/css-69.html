@@ -1,0 +1,53 @@
+```html id="2k8m6c"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Card Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 60px;
+            background: #07111f;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .card {
+            width: 280px;
+            margin: auto;
+            padding: 30px;
+            background: #101d31;
+            color: white;
+            border-radius: 15px;
+            animation: slide 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(-100px);
+            }
+
+            to {
+                transform: translateX(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sliding Card Animation</h1>
+
+    <div class="card">
+        <h2>Web Development</h2>
+        <p>This card moves from left to right.</p>
+    </div>
+
+</body>
+
+</html>
+```

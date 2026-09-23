@@ -1,0 +1,59 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #101d31;
+            padding: 20px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        header h2 {
+            margin: 0;
+            color: #22d3ee;
+        }
+
+        section {
+            height: 500px;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Sticky Header</h2>
+    </header>
+
+    <section>
+        <h1>Section 1</h1>
+        <p>Scroll down to see the sticky header.</p>
+    </section>
+
+    <section>
+        <h1>Section 2</h1>
+    </section>
+
+    <section>
+        <h1>Section 3</h1>
+    </section>
+
+</body>
+</html>
+```

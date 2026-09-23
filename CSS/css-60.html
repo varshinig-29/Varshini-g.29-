@@ -1,0 +1,93 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Only Modal</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 14px 25px;
+    background: #22d3ee;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    width: 300px;
+    background: #101d31;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal-box h2 {
+    color: #22d3ee;
+}
+
+#open:checked ~ .modal {
+    display: flex;
+}
+
+#open {
+    display: none;
+}
+
+.close {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #22d3ee;
+    color: #07111f;
+    border-radius: 8px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<input type="checkbox" id="open">
+
+<label for="open">
+    <button>Open Popup</button>
+</label>
+
+<div class="modal">
+
+    <div class="modal-box">
+        <h2>CSS Modal</h2>
+        <p>This popup works without JavaScript.</p>
+
+        <label for="open" class="close">
+            Close
+        </label>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

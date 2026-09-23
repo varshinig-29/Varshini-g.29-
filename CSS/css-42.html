@@ -1,0 +1,87 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Footer</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+footer {
+    background: #101d31;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    color: #22d3ee;
+}
+
+.footer-box p {
+    color: #cbd5e1;
+}
+
+@media (max-width: 600px) {
+    footer {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main>
+    <h1>Responsive Footer</h1>
+    <p>Resize the browser window to see the responsive footer.</p>
+</main>
+
+<footer>
+    <div class="footer-box">
+        <h3>About</h3>
+        <p>CSS Practical Website</p>
+    </div>
+
+    <div class="footer-box">
+        <h3>Contact</h3>
+        <p>Email: example@gmail.com</p>
+    </div>
+
+    <div class="footer-box">
+        <h3>Follow</h3>
+        <p>Instagram | LinkedIn</p>
+    </div>
+</footer>
+
+</body>
+</html>
+```

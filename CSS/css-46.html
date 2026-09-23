@@ -1,0 +1,101 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Webpage</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+header {
+    padding: 50px 20px;
+    text-align: center;
+    background: #101d31;
+}
+
+header h1 {
+    color: #f59e0b;
+    font-size: 40px;
+}
+
+.menu {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu h2 {
+    text-align: center;
+    color: #22d3ee;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    background: #101d31;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.item h3 {
+    color: #f59e0b;
+}
+
+.price {
+    color: #22d3ee;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .items {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Spice Garden</h1>
+    <p>Delicious food, memorable moments</p>
+</header>
+
+<section class="menu">
+    <h2>Our Menu</h2>
+
+    <div class="items">
+        <div class="item">
+            <h3>Paneer Tikka</h3>
+            <p>Grilled paneer with spices.</p>
+            <p class="price">₹180</p>
+        </div>
+
+        <div class="item">
+            <h3>Veg Biryani</h3>
+            <p>Fragrant rice with vegetables.</p>
+            <p class="price">₹220</p>
+        </div>
+
+        <div class="item">
+            <h3>Masala Dosa</h3>
+            <p>Crispy dosa with potato filling.</p>
+            <p class="price">₹120</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+```

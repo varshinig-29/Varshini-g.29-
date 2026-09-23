@@ -1,0 +1,67 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive CSS Grid</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.box {
+    background: #101d31;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+    color: #22d3ee;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align:center; color:#22d3ee;">
+    Responsive Grid
+</h1>
+
+<div class="container">
+    <div class="box">Item 1</div>
+    <div class="box">Item 2</div>
+    <div class="box">Item 3</div>
+    <div class="box">Item 4</div>
+    <div class="box">Item 5</div>
+    <div class="box">Item 6</div>
+    <div class="box">Item 7</div>
+    <div class="box">Item 8</div>
+</div>
+
+</body>
+</html>
+```

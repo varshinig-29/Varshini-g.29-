@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Positioning</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #07111f;
+            color: white;
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .static {
+            position: static;
+            background: #334155;
+            padding: 20px;
+        }
+
+        .relative {
+            position: relative;
+            left: 40px;
+            background: #312e81;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .absolute-container {
+            position: relative;
+            height: 150px;
+            background: #172554;
+            margin-top: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background: #be185d;
+            padding: 15px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background: #0891b2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #7c3aed;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning</h1>
+
+    <div class="static">Static Position</div>
+
+    <div class="relative">Relative Position</div>
+
+    <div class="absolute-container">
+        <div class="absolute">Absolute Position</div>
+    </div>
+
+    <div class="sticky">Sticky Position</div>
+
+    <div class="fixed">Fixed Position</div>
+
+    <div style="height: 800px;"></div>
+
+</body>
+</html>

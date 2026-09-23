@@ -1,0 +1,68 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 40px;
+            background: #101d31;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #22d3ee;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Three Column Layout</h1>
+
+    <div class="container">
+
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>HTML</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>CSS</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>JavaScript</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

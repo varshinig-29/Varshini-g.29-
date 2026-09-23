@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            color: white;
+            background: linear-gradient(135deg,#020617,#312e81);
+        }
+
+        nav {
+            padding: 18px;
+            background: #0f172a;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .form-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <b>⭐ Registration Form</b>
+
+    <a href="../index.html">Home</a>
+
+</nav>
+
+<div class="container">
+
+<div class="form-card">
+
+<h1>Student Registration</h1>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Email</label>
+<input type="email" placeholder="Enter email" required>
+
+<label>Mobile Number</label>
+<input type="tel" placeholder="Enter mobile number">
+
+<label>Date of Birth</label>
+<input type="date">
+
+<label>Gender</label>
+
+<select>
+    <option>Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+</select>
+
+<label>Password</label>
+<input type="password" placeholder="Enter password">
+
+<button type="submit">
+    Register
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #07111f;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://picsum.photos/400/300?11">
+        <img src="https://picsum.photos/400/300?12">
+        <img src="https://picsum.photos/400/300?13">
+        <img src="https://picsum.photos/400/300?14">
+        <img src="https://picsum.photos/400/300?15">
+        <img src="https://picsum.photos/400/300?16">
+    </div>
+
+</body>
+</html>
+```

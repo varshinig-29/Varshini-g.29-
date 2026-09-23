@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internal and External CSS</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            color: white;
+            background: linear-gradient(135deg, #020617, #4c1d95);
+            text-align: center;
+        }
+
+        nav {
+            padding: 18px;
+            background: #0f172a;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: rgb(123, 14, 14);
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+        }
+
+        .card {
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+        }
+
+        img {
+            width: 300px;
+            max-width: 100%;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .link {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #7c3aed;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+</style>
+</head>
+
+<body>
+
+    <h1>Internal and External CSS</h1>
+
+    <p>This paragraph is styled using Internal CSS.</p>
+
+    <div class="box">
+        This box is styled using External CSS.
+    </div>
+
+</body>
+</html>

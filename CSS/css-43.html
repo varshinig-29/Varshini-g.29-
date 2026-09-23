@@ -1,0 +1,89 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Login and Signup</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    gap: 25px;
+}
+
+.form-box {
+    flex: 1;
+    background: #101d31;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #22d3ee;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #22d3ee;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button>Login</button>
+    </div>
+
+    <div class="form-box">
+        <h2>Signup</h2>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button>Signup</button>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

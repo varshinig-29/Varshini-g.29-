@@ -1,0 +1,49 @@
+```html id="1v9f8b"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: #22d3ee;
+            margin: 80px auto;
+            animation: moveBox 3s infinite alternate;
+        }
+
+        @keyframes moveBox {
+            from {
+                transform: translateX(-150px);
+            }
+
+            to {
+                transform: translateX(150px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Keyframe Animation</h1>
+
+    <div class="box"></div>
+
+</body>
+
+</html>
+```

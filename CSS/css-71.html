@@ -1,0 +1,58 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+
+    <style>
+        :root {
+            --bg: #07111f;
+            --card: #101d31;
+            --text: white;
+            --accent: #22d3ee;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+
+        .card {
+            max-width: 700px;
+            margin: auto;
+            background: var(--card);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--accent);
+        }
+
+        button {
+            background: var(--accent);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Dark Mode</h1>
+        <p>This webpage uses CSS variables for a dark-mode design.</p>
+        <button>Explore</button>
+    </div>
+
+</body>
+</html>
+```

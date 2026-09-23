@@ -1,0 +1,75 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #07111f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100vh;
+            background: #101d31;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            color: #22d3ee;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 160px;
+            }
+
+            .content {
+                margin-left: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="content">
+        <h1>Fixed Sidebar</h1>
+        <p>Scroll the page. The sidebar remains fixed.</p>
+
+        <div style="height: 1000px;"></div>
+    </div>
+
+</body>
+</html>
+```

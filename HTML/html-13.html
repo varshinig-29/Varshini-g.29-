@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Webpage</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#020617,#312e81);
+    color: white;
+}
+
+header {
+    padding: 30px;
+    background: #4f46e5;
+    text-align: center;
+}
+
+nav {
+    padding: 15px;
+    background: #0f172a;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.content {
+    flex: 3;
+    padding: 30px;
+    background: rgba(255,255,255,.1);
+    border-radius: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 30px;
+    background: rgba(255,255,255,.1);
+    border-radius: 20px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #0f172a;
+}
+
+@media(max-width:700px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Responsive Website</h1>
+
+<p>Resize the browser window</p>
+
+</header>
+
+<nav>
+
+<a href="../index.html">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Services</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+<div class="container">
+
+<div class="content">
+
+<h2>Main Content</h2>
+
+<p>
+This webpage automatically adjusts according to screen size.
+</p>
+
+</div>
+
+<div class="sidebar">
+
+<h2>Sidebar</h2>
+
+<p>
+Responsive sidebar content.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Responsive Website
+
+</footer>
+
+</body>
+
+</html>

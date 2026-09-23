@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Pseudo Classes</title>
+
+    <style>
+        body {
+            background: #07111f;
+            color: white;
+            font-family: Arial;
+            padding: 50px;
+        }
+
+        a {
+            color: #67e8f9;
+            font-size: 20px;
+        }
+
+        /* visited */
+        a:visited {
+            color: #a78bfa;
+        }
+
+        /* hover */
+        a:hover {
+            color: #f472b6;
+        }
+
+        /* active */
+        a:active {
+            color: yellow;
+        }
+
+        input {
+            padding: 15px;
+            border: 2px solid #334155;
+            background: #101d31;
+            color: white;
+        }
+
+        /* focus */
+        input:focus {
+            border-color: #22d3ee;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pseudo-classes</h1>
+
+    <a href="https://example.com">Visit Link</a>
+
+    <br><br>
+
+    <input type="text" placeholder="Click and type">
+
+</body>
+</html>
