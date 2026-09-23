@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,9 +69,7 @@
 
         .program {
             display: block;
-
             padding: 14px 18px;
-
             margin: 8px 0;
 
             background: rgba(30, 41, 59, 0.8);
@@ -106,6 +105,70 @@
             font-size: 15px;
             margin-top: 35px;
         }
+
+        .home-button {
+            display: block;
+
+            width: 200px;
+
+            margin: 40px auto 10px;
+
+            padding: 14px;
+
+            text-align: center;
+
+            background: #334155;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .home-button:hover {
+            background: #475569;
+
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+
+            color: #64748b;
+
+            font-size: 13px;
+
+            margin-top: 25px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .container {
+                width: 96%;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+        }
     </style>
 </head>
 
@@ -118,6 +181,9 @@
     <div class="subtitle">
         Web Laboratory Programs
     </div>
+
+
+    <!-- ================= BASIC JAVASCRIPT ================= -->
 
     <h2>Basic JavaScript Programs</h2>
 
@@ -201,8 +267,16 @@
         <span class="number">20.</span> Date and Math Objects
     </a>
 
+    <a href="js-21.html" class="program">
+        <span class="number">21.</span> JavaScript Variables and Data Types
+    </a>
 
-    <h2 class="section">DOM & Event-Based Experiments</h2>
+
+    <!-- ================= DOM & EVENTS ================= -->
+
+    <h2 class="section">
+        DOM & Event-Based Experiments
+    </h2>
 
     <a href="js-22.html" class="program">
         <span class="number">22.</span> Change Text using JavaScript
@@ -264,8 +338,16 @@
         <span class="number">36.</span> Countdown Timer
     </a>
 
+    <a href="js-37.html" class="program">
+        <span class="number">37.</span> Interactive DOM Manipulation
+    </a>
 
-    <h2 class="section">Advanced JavaScript Lab</h2>
+
+    <!-- ================= ADVANCED JAVASCRIPT ================= -->
+
+    <h2 class="section">
+        Advanced JavaScript Lab
+    </h2>
 
     <a href="js-38.html" class="program">
         <span class="number">38.</span> ES6 let, const, Template Literals and Destructuring
@@ -386,6 +468,18 @@
     <a href="js-67.html" class="program">
         <span class="number">67.</span> Email Validation with Regex
     </a>
+
+
+    <!-- ================= BACK TO HOME ================= -->
+
+    <a href="../index.html" class="home-button">
+        ← Back to Main Website
+    </a>
+
+
+    <footer>
+        WebLab · JavaScript Laboratory
+    </footer>
 
 </div>
 
