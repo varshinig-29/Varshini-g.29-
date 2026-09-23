@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Practical Programs</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            color: white;
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(56, 189, 248, 0.18),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(139, 92, 246, 0.20),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #020617,
+                    #07111f,
+                    #111827
+                );
+
+            padding: 30px 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            color: #7dd3fc;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.30);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: #38bdf8;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            min-height: 220px;
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.09),
+                    rgba(255,255,255,0.025)
+                );
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            backdrop-filter: blur(15px);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .number {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+
+            color: #7dd3fc;
+            font-size: 20px;
+            font-weight: bold;
+
+            margin-bottom: 18px;
+        }
+
+        .card h2 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .open-button {
+            display: block;
+            margin-top: 20px;
+
+            padding: 12px;
+
+            text-align: center;
+
+            color: white;
+            text-decoration: none;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #0284c7,
+                    #2563eb
+                );
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .open-button:hover {
+            transform: scale(1.02);
+            filter: brightness(1.15);
+        }
+
+        .home-button {
+            display: block;
+
+            width: 180px;
+
+            margin: 45px auto 20px;
+
+            padding: 13px;
+
+            text-align: center;
+
+            color: white;
+            text-decoration: none;
+
+            background: #334155;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background: #475569;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 25px;
+
+            border-top: 1px solid rgba(255,255,255,0.08);
+
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 900px) {
+            .programs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .programs {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .container {
+                width: 94%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div class="badge">
+                HTML PRACTICAL PROGRAMS
+            </div>
+
+            <h1>
+                HTML <span>Programs</span>
+            </h1>
+
+            <p class="subtitle">
+                Explore and practice HTML practical programs
+                with working examples and demonstrations.
+            </p>
+
+        </header>
+
+
+        <section class="programs">
+
+            <!-- Program 1 -->
+
+            <div class="card">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h2>
+                    HTML Program 1
+                </h2>
+
+                <p>
+                    Open the first HTML practical program.
+                </p>
+
+                <a
+                    href="HTML1.html"
+                    class="open-button"
+                >
+                    Open Program →
+                </a>
+
+            </div>
+
+
+            <!-- Program 2 -->
+
+            <div class="card">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h2>
+                    HTML Program 2
+                </h2>
+
+                <p>
+                    Open the second HTML practical program.
+                </p>
+
+                <a
+                    href="HTML2.html"
+                    class="open-button"
+                >
+                    Open Program →
+                </a>
+
+            </div>
+
+
+            <!-- Program 3 -->
+
+            <div class="card">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h2>
+                    HTML Program 3
+                </h2>
+
+                <p>
+                    Open the third HTML practical program.
+                </p>
+
+                <a
+                    href="HTML3.html"
+                    class="open-button"
+                >
+                    Open Program →
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+        <a
+            href="../index.html"
+            class="home-button"
+        >
+            ← Back to Home
+        </a>
+
+
+        <footer>
+
+            WebLab · HTML Practical Programs
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
