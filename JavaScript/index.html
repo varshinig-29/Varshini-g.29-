@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,122 +16,133 @@
 
         body {
             min-height: 100vh;
-            padding: 40px;
+            padding: 40px 20px;
+
             background:
                 radial-gradient(circle at top left, #172554, transparent 35%),
                 radial-gradient(circle at bottom right, #3b0764, transparent 35%),
                 #020617;
+
             color: white;
         }
 
         .container {
-            width: 90%;
-            max-width: 900px;
+            width: 95%;
+            max-width: 1100px;
             margin: auto;
-            background: rgba(15, 23, 42, 0.92);
-            border: 1px solid rgba(34, 211, 238, 0.25);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
         }
 
         h1 {
             text-align: center;
             color: #f7df1e;
+            font-size: 42px;
             margin-bottom: 10px;
-            font-size: 36px;
         }
 
         .subtitle {
             text-align: center;
-            color: #22d3ee;
-            margin-bottom: 35px;
-            font-size: 20px;
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 40px;
         }
 
         h2 {
             color: #22d3ee;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid rgba(34, 211, 238, 0.3);
-            padding-bottom: 8px;
+            margin: 35px 0 20px;
+            border-bottom: 1px solid rgba(34, 211, 238, 0.25);
+            padding-bottom: 10px;
+        }
+
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
         }
 
         .program {
             display: block;
-            padding: 14px 18px;
-            margin: 8px 0;
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 10px;
-            color: #e2e8f0;
             text-decoration: none;
+            color: #e2e8f0;
+
+            background: rgba(15, 23, 42, 0.92);
+
+            border: 1px solid rgba(139, 92, 246, 0.35);
+
+            border-radius: 15px;
+
+            padding: 20px;
+
             transition: 0.3s;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
         .program:hover {
-            background: rgba(34, 211, 238, 0.15);
+            transform: translateY(-5px);
+
             border-color: #22d3ee;
-            transform: translateX(5px);
-            color: #ffffff;
+
+            box-shadow:
+                0 15px 35px rgba(34, 211, 238, 0.15);
         }
 
         .number {
             color: #f7df1e;
             font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
         }
 
-        .section {
-            color: #a78bfa;
-            font-size: 15px;
-            margin-top: 35px;
+        .title {
+            color: #f8fafc;
+            font-size: 17px;
+            line-height: 1.5;
         }
 
         .home-button {
             display: block;
-            width: 210px;
-            margin: 40px auto 10px;
-            padding: 14px;
-            text-align: center;
-            background: #334155;
+            width: fit-content;
+
+            margin: 45px auto 20px;
+
+            padding: 14px 25px;
+
+            background: #7c3aed;
+
             color: white;
+
             text-decoration: none;
+
             border-radius: 10px;
+
             font-weight: bold;
+
             transition: 0.3s;
         }
 
         .home-button:hover {
-            background: #475569;
-            transform: translateY(-3px);
+            background: #9333ea;
+            transform: translateY(-2px);
         }
 
         footer {
             text-align: center;
-            color: #64748b;
-            font-size: 13px;
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 35px;
+            color: #94a3b8;
+            font-size: 14px;
         }
 
         @media (max-width: 600px) {
-            body {
-                padding: 20px 10px;
-            }
-
-            .container {
-                width: 96%;
-                padding: 25px;
-            }
-
             h1 {
-                font-size: 28px;
+                font-size: 32px;
             }
 
             .subtitle {
-                font-size: 17px;
+                font-size: 15px;
+            }
+
+            .programs {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -144,306 +154,399 @@
 
     <h1>JavaScript Laboratory</h1>
 
-    <div class="subtitle">
-        Web Laboratory Programs
+    <p class="subtitle">
+        Practice. Experiment. Understand JavaScript.
+    </p>
+
+
+    <!-- ================= PROGRAMS 01 - 20 ================= -->
+
+    <h2>JavaScript Basics</h2>
+
+    <div class="programs">
+
+        <a href="Js-01.html" class="program">
+            <div class="number">Program 01</div>
+            <div class="title">Display Hello World</div>
+        </a>
+
+        <a href="Js-02.html" class="program">
+            <div class="number">Program 02</div>
+            <div class="title">Arithmetic Operations</div>
+        </a>
+
+        <a href="Js-03.html" class="program">
+            <div class="number">Program 03</div>
+            <div class="title">Largest of Three Numbers</div>
+        </a>
+
+        <a href="Js-04.html" class="program">
+            <div class="number">Program 04</div>
+            <div class="title">Even or Odd</div>
+        </a>
+
+        <a href="Js-05.html" class="program">
+            <div class="number">Program 05</div>
+            <div class="title">Positive, Negative or Zero</div>
+        </a>
+
+        <a href="Js-06.html" class="program">
+            <div class="number">Program 06</div>
+            <div class="title">Factorial</div>
+        </a>
+
+        <a href="Js-07.html" class="program">
+            <div class="number">Program 07</div>
+            <div class="title">Fibonacci Series</div>
+        </a>
+
+        <a href="Js-08.html" class="program">
+            <div class="number">Program 08</div>
+            <div class="title">Prime Number</div>
+        </a>
+
+        <a href="Js-09.html" class="program">
+            <div class="number">Program 09</div>
+            <div class="title">Palindrome Number</div>
+        </a>
+
+        <a href="Js-10.html" class="program">
+            <div class="number">Program 10</div>
+            <div class="title">Reverse Number</div>
+        </a>
+
+        <a href="Js-11.html" class="program">
+            <div class="number">Program 11</div>
+            <div class="title">Sum of Digits</div>
+        </a>
+
+        <a href="Js-12.html" class="program">
+            <div class="number">Program 12</div>
+            <div class="title">Largest and Smallest Element in Array</div>
+        </a>
+
+        <a href="Js-13.html" class="program">
+            <div class="number">Program 13</div>
+            <div class="title">Sort Array</div>
+        </a>
+
+        <a href="Js-14.html" class="program">
+            <div class="number">Program 14</div>
+            <div class="title">Sum and Average of Array</div>
+        </a>
+
+        <a href="Js-15.html" class="program">
+            <div class="number">Program 15</div>
+            <div class="title">JavaScript Functions</div>
+        </a>
+
+        <a href="Js-16.html" class="program">
+            <div class="number">Program 16</div>
+            <div class="title">Arrow Functions</div>
+        </a>
+
+        <a href="Js-17.html" class="program">
+            <div class="number">Program 17</div>
+            <div class="title">Strings and String Methods</div>
+        </a>
+
+        <a href="Js-18.html" class="program">
+            <div class="number">Program 18</div>
+            <div class="title">Arrays and Array Methods</div>
+        </a>
+
+        <a href="Js-19.html" class="program">
+            <div class="number">Program 19</div>
+            <div class="title">Objects</div>
+        </a>
+
+        <a href="Js-20.html" class="program">
+            <div class="number">Program 20</div>
+            <div class="title">Date and Math Objects</div>
+        </a>
+
     </div>
 
 
-    <!-- ================= BASIC JAVASCRIPT ================= -->
+    <!-- ================= PROGRAMS 21 - 37 ================= -->
+
+    <h2>DOM, Events and Interactive Programs</h2>
+
+    <div class="programs">
+
+        <a href="Js-21.html" class="program">
+            <div class="number">Program 21</div>
+            <div class="title">JavaScript Variables and Data Types</div>
+        </a>
+
+        <a href="Js-22.html" class="program">
+            <div class="number">Program 22</div>
+            <div class="title">Change Text using JavaScript</div>
+        </a>
+
+        <a href="Js-23.html" class="program">
+            <div class="number">Program 23</div>
+            <div class="title">Change Webpage Background Color</div>
+        </a>
+
+        <a href="Js-24.html" class="program">
+            <div class="number">Program 24</div>
+            <div class="title">Button Click Event</div>
+        </a>
+
+        <a href="Js-25.html" class="program">
+            <div class="number">Program 25</div>
+            <div class="title">Show / Hide HTML Element</div>
+        </a>
+
+        <a href="Js-26.html" class="program">
+            <div class="number">Program 26</div>
+            <div class="title">Change Image on Button Click</div>
+        </a>
+
+        <a href="Js-27.html" class="program">
+            <div class="number">Program 27</div>
+            <div class="title">Digital Clock</div>
+        </a>
+
+        <a href="Js-28.html" class="program">
+            <div class="number">Program 28</div>
+            <div class="title">Simple Calculator</div>
+        </a>
+
+        <a href="Js-29.html" class="program">
+            <div class="number">Program 29</div>
+            <div class="title">Number Guessing Game</div>
+        </a>
+
+        <a href="Js-30.html" class="program">
+            <div class="number">Program 30</div>
+            <div class="title">Form Validation</div>
+        </a>
+
+        <a href="Js-31.html" class="program">
+            <div class="number">Program 31</div>
+            <div class="title">Validate Name, Email, Phone and Password</div>
+        </a>
 
-    <h2>Basic JavaScript Programs</h2>
-
-    <a href="Js-01.html" class="program">
-        <span class="number">01.</span> Display Hello World
-    </a>
-
-    <a href="Js-02.html" class="program">
-        <span class="number">02.</span> Arithmetic Operations
-    </a>
-
-    <a href="Js-03.html" class="program">
-        <span class="number">03.</span> Largest of Three Numbers
-    </a>
-
-    <a href="Js-04.html" class="program">
-        <span class="number">04.</span> Even or Odd
-    </a>
-
-    <a href="Js-05.html" class="program">
-        <span class="number">05.</span> Positive, Negative or Zero
-    </a>
-
-    <a href="Js-06.html" class="program">
-        <span class="number">06.</span> Factorial
-    </a>
-
-    <a href="Js-07.html" class="program">
-        <span class="number">07.</span> Fibonacci Series
-    </a>
-
-    <a href="Js-08.html" class="program">
-        <span class="number">08.</span> Prime Number
-    </a>
-
-    <a href="Js-09.html" class="program">
-        <span class="number">09.</span> Palindrome Number
-    </a>
-
-    <a href="Js-10.html" class="program">
-        <span class="number">10.</span> Reverse Number
-    </a>
-
-    <a href="Js-11.html" class="program">
-        <span class="number">11.</span> Sum of Digits
-    </a>
-
-    <a href="Js-12.html" class="program">
-        <span class="number">12.</span> Largest and Smallest Element in Array
-    </a>
-
-    <a href="Js-13.html" class="program">
-        <span class="number">13.</span> Sort Array
-    </a>
-
-    <a href="Js-14.html" class="program">
-        <span class="number">14.</span> Sum and Average of Array
-    </a>
-
-    <a href="Js-15.html" class="program">
-        <span class="number">15.</span> JavaScript Functions
-    </a>
-
-    <a href="Js-16.html" class="program">
-        <span class="number">16.</span> Arrow Functions
-    </a>
-
-    <a href="Js-17.html" class="program">
-        <span class="number">17.</span> Strings and String Methods
-    </a>
-
-    <a href="Js-18.html" class="program">
-        <span class="number">18.</span> Arrays and Array Methods
-    </a>
-
-    <a href="Js-19.html" class="program">
-        <span class="number">19.</span> Objects
-    </a>
-
-    <a href="Js-20.html" class="program">
-        <span class="number">20.</span> Date and Math Objects
-    </a>
-
-    <a href="Js-21.html" class="program">
-        <span class="number">21.</span> JavaScript Variables and Data Types
-    </a>
-
-
-    <!-- ================= DOM & EVENTS ================= -->
-
-    <h2 class="section">
-        DOM & Event-Based Experiments
-    </h2>
-
-    <a href="Js-22.html" class="program">
-        <span class="number">22.</span> Change Text using JavaScript
-    </a>
-
-    <a href="Js-23.html" class="program">
-        <span class="number">23.</span> Change Webpage Background Color
-    </a>
-
-    <a href="Js-24.html" class="program">
-        <span class="number">24.</span> Button Click Event
-    </a>
-
-    <a href="Js-25.html" class="program">
-        <span class="number">25.</span> Show / Hide HTML Element
-    </a>
-
-    <a href="Js-26.html" class="program">
-        <span class="number">26.</span> Change Image on Button Click
-    </a>
-
-    <a href="Js-27.html" class="program">
-        <span class="number">27.</span> Digital Clock
-    </a>
-
-    <a href="Js-28.html" class="program">
-        <span class="number">28.</span> Simple Calculator
-    </a>
-
-    <a href="Js-29.html" class="program">
-        <span class="number">29.</span> Number Guessing Game
-    </a>
-
-    <a href="Js-30.html" class="program">
-        <span class="number">30.</span> Form Validation
-    </a>
-
-    <a href="Js-31.html" class="program">
-        <span class="number">31.</span> Validate Name, Email, Phone and Password
-    </a>
-
-    <a href="Js-32.html" class="program">
-        <span class="number">32.</span> To-Do List
-    </a>
-
-    <a href="Js-33.html" class="program">
-        <span class="number">33.</span> Quiz Application
-    </a>
-
-    <a href="Js-34.html" class="program">
-        <span class="number">34.</span> Counter Increment / Decrement
-    </a>
-
-    <a href="Js-35.html" class="program">
-        <span class="number">35.</span> Stopwatch
-    </a>
-
-    <a href="Js-36.html" class="program">
-        <span class="number">36.</span> Countdown Timer
-    </a>
-
-    <a href="Js-37.html" class="program">
-        <span class="number">37.</span> Interactive DOM Manipulation
-    </a>
-
-
-    <!-- ================= ADVANCED JAVASCRIPT ================= -->
-
-    <h2 class="section">
-        Advanced JavaScript Lab
-    </h2>
-
-    <a href="Js-38.html" class="program">
-        <span class="number">38.</span> ES6 let, const, Template Literals and Destructuring
-    </a>
-
-    <a href="Js-39.html" class="program">
-        <span class="number">39.</span> Spread and Rest Operators
-    </a>
-
-    <a href="Js-40.html" class="program">
-        <span class="number">40.</span> Classes and Objects
-    </a>
-
-    <a href="Js-41.html" class="program">
-        <span class="number">41.</span> Inheritance
-    </a>
-
-    <a href="Js-42.html" class="program">
-        <span class="number">42.</span> Callbacks, Promises, Async/Await
-    </a>
-
-    <a href="Js-43.html" class="program">
-        <span class="number">43.</span> Fetch API
-    </a>
-
-    <a href="Js-44.html" class="program">
-        <span class="number">44.</span> Display API Data Dynamically
-    </a>
-
-    <a href="Js-45.html" class="program">
-        <span class="number">45.</span> localStorage
-    </a>
-
-    <a href="Js-46.html" class="program">
-        <span class="number">46.</span> Responsive Login Form with JS Validation
-    </a>
-
-    <a href="Js-47.html" class="program">
-        <span class="number">47.</span> Complete Interactive Webpage
-    </a>
-
-    <a href="Js-48.html" class="program">
-        <span class="number">48.</span> Swap Two Numbers
-    </a>
-
-    <a href="Js-49.html" class="program">
-        <span class="number">49.</span> GCD
-    </a>
-
-    <a href="Js-50.html" class="program">
-        <span class="number">50.</span> LCM
-    </a>
-
-    <a href="Js-51.html" class="program">
-        <span class="number">51.</span> Armstrong Number
-    </a>
-
-    <a href="Js-52.html" class="program">
-        <span class="number">52.</span> Perfect Number
-    </a>
-
-    <a href="Js-53.html" class="program">
-        <span class="number">53.</span> Multiplication Table
-    </a>
-
-    <a href="Js-54.html" class="program">
-        <span class="number">54.</span> Power
-    </a>
-
-    <a href="Js-55.html" class="program">
-        <span class="number">55.</span> Count Digits
-    </a>
-
-    <a href="Js-56.html" class="program">
-        <span class="number">56.</span> Second Largest Array Element
-    </a>
-
-    <a href="Js-57.html" class="program">
-        <span class="number">57.</span> Remove Duplicates from Array
-    </a>
-
-    <a href="Js-58.html" class="program">
-        <span class="number">58.</span> Merge Two Arrays
-    </a>
-
-    <a href="Js-59.html" class="program">
-        <span class="number">59.</span> Frequency of Each Array Element
-    </a>
-
-    <a href="Js-60.html" class="program">
-        <span class="number">60.</span> Common Elements in Two Arrays
-    </a>
-
-    <a href="Js-61.html" class="program">
-        <span class="number">61.</span> Reverse String
-    </a>
-
-    <a href="Js-62.html" class="program">
-        <span class="number">62.</span> String Palindrome
-    </a>
-
-    <a href="Js-63.html" class="program">
-        <span class="number">63.</span> Count Vowels and Consonants
-    </a>
-
-    <a href="Js-64.html" class="program">
-        <span class="number">64.</span> Count Words
-    </a>
-
-    <a href="Js-65.html" class="program">
-        <span class="number">65.</span> Character Frequency
-    </a>
-
-    <a href="Js-66.html" class="program">
-        <span class="number">66.</span> Regular Expressions
-    </a>
-
-    <a href="Js-67.html" class="program">
-        <span class="number">67.</span> Email Validation with Regex
-    </a>
-
-
-    <!-- ================= BACK TO HOME ================= -->
+        <a href="Js-32.html" class="program">
+            <div class="number">Program 32</div>
+            <div class="title">To-Do List</div>
+        </a>
+
+        <a href="Js-33.html" class="program">
+            <div class="number">Program 33</div>
+            <div class="title">Quiz Application</div>
+        </a>
+
+        <a href="Js-34.html" class="program">
+            <div class="number">Program 34</div>
+            <div class="title">Counter Increment / Decrement</div>
+        </a>
+
+        <a href="Js-35.html" class="program">
+            <div class="number">Program 35</div>
+            <div class="title">Stopwatch</div>
+        </a>
+
+        <a href="Js-36.html" class="program">
+            <div class="number">Program 36</div>
+            <div class="title">Countdown Timer</div>
+        </a>
+
+        <a href="Js-37.html" class="program">
+            <div class="number">Program 37</div>
+            <div class="title">Interactive DOM Manipulation</div>
+        </a>
+
+    </div>
+
+
+    <!-- ================= PROGRAMS 38 - 47 ================= -->
+
+    <h2>Modern JavaScript and Web Features</h2>
+
+    <div class="programs">
+
+        <a href="Js-38.html" class="program">
+            <div class="number">Program 38</div>
+            <div class="title">ES6 let, const, Template Literals and Destructuring</div>
+        </a>
+
+        <a href="Js-39.html" class="program">
+            <div class="number">Program 39</div>
+            <div class="title">Spread and Rest Operators</div>
+        </a>
+
+        <a href="Js-40.html" class="program">
+            <div class="number">Program 40</div>
+            <div class="title">Classes and Objects</div>
+        </a>
+
+        <a href="Js-41.html" class="program">
+            <div class="number">Program 41</div>
+            <div class="title">Inheritance</div>
+        </a>
+
+        <a href="Js-42.html" class="program">
+            <div class="number">Program 42</div>
+            <div class="title">Callbacks, Promises, Async/Await</div>
+        </a>
+
+        <a href="Js-43.html" class="program">
+            <div class="number">Program 43</div>
+            <div class="title">Fetch API</div>
+        </a>
+
+        <a href="Js-44.html" class="program">
+            <div class="number">Program 44</div>
+            <div class="title">Display API Data Dynamically</div>
+        </a>
+
+        <a href="Js-45.html" class="program">
+            <div class="number">Program 45</div>
+            <div class="title">localStorage</div>
+        </a>
+
+        <a href="Js-46.html" class="program">
+            <div class="number">Program 46</div>
+            <div class="title">Responsive Login Form with JS Validation</div>
+        </a>
+
+        <a href="Js-47.html" class="program">
+            <div class="number">Program 47</div>
+            <div class="title">Complete Interactive Webpage</div>
+        </a>
+
+    </div>
+
+
+    <!-- ================= PROGRAMS 48 - 60 ================= -->
+
+    <h2>JavaScript Problem Solving</h2>
+
+    <div class="programs">
+
+        <a href="Js-48.html" class="program">
+            <div class="number">Program 48</div>
+            <div class="title">Swap Two Numbers</div>
+        </a>
+
+        <a href="Js-49.html" class="program">
+            <div class="number">Program 49</div>
+            <div class="title">GCD</div>
+        </a>
+
+        <a href="Js-50.html" class="program">
+            <div class="number">Program 50</div>
+            <div class="title">LCM</div>
+        </a>
+
+        <a href="Js-51.html" class="program">
+            <div class="number">Program 51</div>
+            <div class="title">Armstrong Number</div>
+        </a>
+
+        <a href="Js-52.html" class="program">
+            <div class="number">Program 52</div>
+            <div class="title">Perfect Number</div>
+        </a>
+
+        <a href="Js-53.html" class="program">
+            <div class="number">Program 53</div>
+            <div class="title">Multiplication Table</div>
+        </a>
+
+        <a href="Js-54.html" class="program">
+            <div class="number">Program 54</div>
+            <div class="title">Power</div>
+        </a>
+
+        <a href="Js-55.html" class="program">
+            <div class="number">Program 55</div>
+            <div class="title">Count Digits</div>
+        </a>
+
+        <a href="Js-56.html" class="program">
+            <div class="number">Program 56</div>
+            <div class="title">Second Largest Array Element</div>
+        </a>
+
+        <a href="Js-57.html" class="program">
+            <div class="number">Program 57</div>
+            <div class="title">Remove Duplicates from Array</div>
+        </a>
+
+        <a href="Js-58.html" class="program">
+            <div class="number">Program 58</div>
+            <div class="title">Merge Two Arrays</div>
+        </a>
+
+        <a href="Js-59.html" class="program">
+            <div class="number">Program 59</div>
+            <div class="title">Frequency of Each Array Element</div>
+        </a>
+
+        <a href="Js-60.html" class="program">
+            <div class="number">Program 60</div>
+            <div class="title">Common Elements in Two Arrays</div>
+        </a>
+
+    </div>
+
+
+    <!-- ================= PROGRAMS 61 - 67 ================= -->
+
+    <h2>String and Regular Expression Programs</h2>
+
+    <div class="programs">
+
+        <a href="Js-61.html" class="program">
+            <div class="number">Program 61</div>
+            <div class="title">Reverse String</div>
+        </a>
+
+        <a href="Js-62.html" class="program">
+            <div class="number">Program 62</div>
+            <div class="title">String Palindrome</div>
+        </a>
+
+        <a href="Js-63.html" class="program">
+            <div class="number">Program 63</div>
+            <div class="title">Count Vowels and Consonants</div>
+        </a>
+
+        <a href="Js-64.html" class="program">
+            <div class="number">Program 64</div>
+            <div class="title">Count Words</div>
+        </a>
+
+        <a href="Js-65.html" class="program">
+            <div class="number">Program 65</div>
+            <div class="title">Character Frequency</div>
+        </a>
+
+        <a href="Js-66.html" class="program">
+            <div class="number">Program 66</div>
+            <div class="title">Regular Expressions</div>
+        </a>
+
+        <a href="Js-67.html" class="program">
+            <div class="number">Program 67</div>
+            <div class="title">Email Validation with Regex</div>
+        </a>
+
+    </div>
+
+
+    <!-- ================= HOME ================= -->
 
     <a href="../index.html" class="home-button">
         ← Back to Main Website
     </a>
 
     <footer>
-        WebLab · JavaScript Laboratory
+        JavaScript Laboratory | 67 Practical Programs
     </footer>
 
 </div>
