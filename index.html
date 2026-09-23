@@ -6,227 +6,822 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Web Development Practicals</title>
+    <title>WebLab | Practical Programs</title>
+
+    <meta name="description"
+        content="HTML, CSS and JavaScript Practical Programs Portal">
 
     <style>
-        body {
-            font-family: Arial;
+
+        /* ================================
+           RESET
+        ================================= */
+
+        * {
             margin: 0;
-            color: white;
-            background: linear-gradient(135deg, #020617, #4c1d95);
-            text-align: center;
-            min-height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            color: #ffffff;
+
+            background:
+                radial-gradient(circle at 10% 20%,
+                    rgba(56, 189, 248, 0.18),
+                    transparent 28%),
+
+                radial-gradient(circle at 90% 15%,
+                    rgba(139, 92, 246, 0.20),
+                    transparent 30%),
+
+                radial-gradient(circle at 50% 100%,
+                    rgba(14, 165, 233, 0.12),
+                    transparent 35%),
+
+                linear-gradient(135deg,
+                    #020617 0%,
+                    #07111f 45%,
+                    #111827 100%);
+
+            overflow-x: hidden;
+        }
+
+
+        /* ================================
+           BACKGROUND DECORATIONS
+        ================================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+
+            width: 400px;
+            height: 400px;
+
+            border-radius: 50%;
+
+            background: rgba(59, 130, 246, 0.10);
+
+            filter: blur(80px);
+
+            top: -150px;
+            left: -150px;
+
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: rgba(168, 85, 247, 0.10);
+
+            filter: blur(90px);
+
+            bottom: -120px;
+            right: -100px;
+
+            pointer-events: none;
+        }
+
+
+        /* ================================
+           NAVBAR
+        ================================= */
 
         nav {
-            padding: 20px 50px;
-            background: #0f172a;
+            width: 100%;
+
+            padding: 22px 7%;
+
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
+
+            justify-content: space-between;
+
+            position: relative;
+
+            z-index: 10;
         }
 
-        nav h2 {
-            margin: 0;
-            color: #a78bfa;
+        .logo {
+            font-size: 23px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
+        .logo span {
+            color: #38bdf8;
         }
 
-        nav a:hover {
-            color: #c4b5fd;
+        .nav-links {
+            display: flex;
+
+            gap: 10px;
+
+            list-style: none;
         }
 
-        .hero {
-            max-width: 1000px;
-            margin: 90px auto 50px;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #a78bfa;
-        }
-
-        .hero p {
+        .nav-links a {
             color: #cbd5e1;
-            font-size: 19px;
-            line-height: 1.7;
-        }
 
-        .cards {
-            max-width: 1000px;
-            margin: 50px auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            padding: 20px;
-        }
+            text-decoration: none;
 
-        .card {
-            padding: 40px 25px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
+            padding: 10px 16px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+
             transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.13);
+        .nav-links a:hover {
+            color: white;
+
+            background: rgba(255, 255, 255, 0.08);
         }
 
-        .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: 65px auto 50px;
+
+            text-align: center;
         }
 
-        .card h2 {
+        .badge {
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border: 1px solid rgba(56, 189, 248, 0.30);
+
+            background: rgba(56, 189, 248, 0.08);
+
+            color: #7dd3fc;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+
+            line-height: 1.02;
+
+            font-weight: 900;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            background:
+                linear-gradient(90deg,
+                    #38bdf8,
+                    #818cf8,
+                    #c084fc);
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #94a3b8;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ================================
+           STAT BAR
+        ================================= */
+
+        .stats {
+            width: 90%;
+
+            max-width: 900px;
+
+            margin: 45px auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .stat {
+            padding: 20px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.045);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .stat h2 {
+            font-size: 28px;
+
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #94a3b8;
+
+            font-size: 13px;
+        }
+
+
+        /* ================================
+           PROGRAM SECTION
+        ================================= */
+
+        .program-section {
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: 75px auto 100px;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+
             margin-bottom: 10px;
         }
 
-        .card p {
-            color: #cbd5e1;
-            line-height: 1.6;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            background: #7c3aed;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-        }
-
-        .button:hover {
-            background: #8b5cf6;
-        }
-
-        footer {
-            margin-top: 70px;
-            padding: 25px;
-            background: #0f172a;
+        .section-heading p {
             color: #94a3b8;
         }
 
-        @media (max-width: 800px) {
 
-            nav {
-                padding: 20px;
-                flex-direction: column;
-                gap: 15px;
-            }
+        /* ================================
+           CARDS
+        ================================= */
 
-            nav a {
-                margin: 0 8px;
-            }
+        .cards {
+            display: grid;
 
-            .hero h1 {
-                font-size: 40px;
-            }
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 35px 30px;
+
+            min-height: 330px;
+
+            border-radius: 26px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.09),
+                    rgba(255,255,255,0.025)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.10);
+
+            backdrop-filter: blur(18px);
+
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            border-color:
+                rgba(125, 211, 252, 0.40);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.35);
+        }
+
+        .card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+
+            top: -80px;
+            right: -70px;
+
+            background: rgba(56, 189, 248, 0.12);
+
+            filter: blur(10px);
+        }
+
+        .card.css-card::before {
+            background: rgba(129, 140, 248, 0.14);
+        }
+
+        .card.js-card::before {
+            background: rgba(192, 132, 252, 0.14);
+        }
+
+
+        /* ================================
+           ICON
+        ================================= */
+
+        .icon {
+            width: 65px;
+
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 18px;
+
+            font-size: 27px;
+
+            margin-bottom: 25px;
+
+            background:
+                rgba(56, 189, 248, 0.12);
+
+            border:
+                1px solid rgba(56, 189, 248, 0.20);
+        }
+
+        .css-card .icon {
+            background:
+                rgba(129, 140, 248, 0.12);
+
+            border-color:
+                rgba(129, 140, 248, 0.20);
+        }
+
+        .js-card .icon {
+            background:
+                rgba(192, 132, 252, 0.12);
+
+            border-color:
+                rgba(192, 132, 252, 0.20);
+        }
+
+
+        /* ================================
+           CARD CONTENT
+        ================================= */
+
+        .card h3 {
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #94a3b8;
+
+            line-height: 1.65;
+
+            font-size: 14px;
+
+            min-height: 70px;
+        }
+
+        .count {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            color: #7dd3fc;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+        .css-card .count {
+            color: #a5b4fc;
+        }
+
+        .js-card .count {
+            color: #d8b4fe;
+        }
+
+
+        /* ================================
+           BUTTON
+        ================================= */
+
+        .card-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 13px 18px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #0284c7,
+                    #2563eb
+                );
+
+            transition: 0.3s;
+        }
+
+        .card-button:hover {
+            transform: scale(1.02);
+
+            filter: brightness(1.15);
+        }
+
+        .css-card .card-button {
+            background:
+                linear-gradient(
+                    90deg,
+                    #4f46e5,
+                    #7c3aed
+                );
+        }
+
+        .js-card .card-button {
+            background:
+                linear-gradient(
+                    90deg,
+                    #7c3aed,
+                    #a855f7
+                );
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #cbd5e1;
+        }
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 850px) {
 
             .cards {
                 grid-template-columns: 1fr;
             }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                margin-top: 45px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <nav>
-        <h2>WebPracticals</h2>
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
 
-        <div>
-            <a href="index.html">Home</a>
-            <a href="html/index.html">HTML</a>
-            <a href="css/index.html">CSS</a>
-            <a href="javascript/index.html">JavaScript</a>
+    <nav>
+
+        <div class="logo">
+            Web<span>Lab</span>
         </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="html-index.html">HTML</a>
+            </li>
+
+            <li>
+                <a href="CSS">CSS</a>
+            </li>
+
+            <li>
+                <a href="JavaScript">
+                    JavaScript
+                </a>
+            </li>
+
+        </ul>
+
     </nav>
 
-    <section class="hero">
 
-        <h1>
-            Web Development <span>Practicals</span>
-        </h1>
+    <!-- ================================
+         HERO SECTION
+    ================================= -->
 
-        <p>
-            A complete collection of HTML, CSS and JavaScript
-            practical programs with clean demonstrations
-            and working examples.
-        </p>
+    <main>
 
-    </section>
+        <section class="hero">
 
-    <section class="cards">
+            <div class="badge">
+                ✦ HTML · CSS · JAVASCRIPT PRACTICALS
+            </div>
 
-        <div class="card">
-
-            <div class="icon">🌐</div>
-
-            <h2>HTML Programs</h2>
+            <h1>
+                Build.
+                <span>Practice.</span>
+                Understand.
+            </h1>
 
             <p>
-                Learn HTML fundamentals, forms, tables,
-                multimedia, semantic elements and more.
+                A complete practical programs portal designed
+                to explore HTML, CSS and JavaScript concepts
+                through interactive examples and working
+                demonstrations.
             </p>
 
-            <a class="button" href="html/index.html">
-                View HTML
-            </a>
+        </section>
 
-        </div>
 
-        <div class="card">
+        <!-- ================================
+             STATISTICS
+        ================================= -->
 
-            <div class="icon">🎨</div>
+        <section class="stats">
 
-            <h2>CSS Programs</h2>
+            <div class="stat">
+                <h2>15+</h2>
+                <p>HTML Programs</p>
+            </div>
 
-            <p>
-                Explore selectors, layouts, Flexbox, Grid,
-                animations, responsive design and more.
-            </p>
+            <div class="stat">
+                <h2>75+</h2>
+                <p>CSS Programs</p>
+            </div>
 
-            <a class="button" href="css/index.html">
-                View CSS
-            </a>
+            <div class="stat">
+                <h2>67+</h2>
+                <p>JavaScript Programs</p>
+            </div>
 
-        </div>
+        </section>
 
-        <div class="card">
 
-            <div class="icon">⚡</div>
+        <!-- ================================
+             PROGRAM CARDS
+        ================================= -->
 
-            <h2>JavaScript Programs</h2>
+        <section class="program-section">
 
-            <p>
-                Practice JavaScript basics, DOM manipulation,
-                events, forms, storage and mini projects.
-            </p>
+            <div class="section-heading">
 
-            <a class="button" href="javascript/index.html">
-                View JavaScript
-            </a>
+                <h2>Explore Practical Programs</h2>
 
-        </div>
+                <p>
+                    Choose a technology and start exploring
+                    the practical experiments.
+                </p>
 
-    </section>
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- HTML CARD -->
+
+                <article class="card html-card">
+
+                    <div class="icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3>
+                        HTML Programs
+                    </h3>
+
+                    <p>
+                        Learn HTML fundamentals through
+                        headings, lists, tables, forms,
+                        multimedia, semantic elements
+                        and HTML5 features.
+                    </p>
+
+                    <span class="count">
+                        15 Practical Programs
+                    </span>
+
+                    <a
+                        href="html/index.html"
+                        class="card-button"
+                    >
+                        View HTML Programs
+                        →
+                    </a>
+
+                </article>
+
+
+                <!-- CSS CARD -->
+
+                <article class="card css-card">
+
+                    <div class="icon">
+                        #
+                    </div>
+
+                    <h3>
+                        CSS Programs
+                    </h3>
+
+                    <p>
+                        Explore selectors, colors,
+                        layouts, Flexbox, Grid,
+                        responsive design, animations,
+                        transformations and more.
+                    </p>
+
+                    <span class="count">
+                        75 Practical Programs
+                    </span>
+
+                    <a
+                        href="css/index.html"
+                        class="card-button"
+                    >
+                        View CSS Programs
+                        →
+                    </a>
+
+                </article>
+
+
+                <!-- JAVASCRIPT CARD -->
+
+                <article class="card js-card">
+
+                    <div class="icon">
+                        JS
+                    </div>
+
+                    <h3>
+                        JavaScript Programs
+                    </h3>
+
+                    <p>
+                        Practice JavaScript logic,
+                        DOM manipulation, events,
+                        forms, browser APIs,
+                        storage and mini projects.
+                    </p>
+
+                    <span class="count">
+                        67 Practical Programs
+                    </span>
+
+                    <a
+                        href="javascript/index.html"
+                        class="card-button"
+                    >
+                        View JavaScript Programs
+                        →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
 
     <footer>
-        © 2026 Web Development Practical Programs
+
+        <p>
+            <strong>WebLab</strong>
+            · HTML · CSS · JavaScript Practical Programs
+        </p>
+
+        <p style="margin-top: 8px;">
+            Designed for learning, practice and demonstration.
+        </p>
+
     </footer>
 
 </body>
